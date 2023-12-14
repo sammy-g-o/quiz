@@ -49,14 +49,14 @@ li {
     padding: 0 10px;
 }
 
-a {
+nav a {
     text-decoration: none;
     color: #e5e5e5;
     position: relative;
     font-size: 19px;
 }
 
-a::after {
+nav a::after {
     content: ' ';
     position: absolute;
     background-color: #e5e5e5;
@@ -69,14 +69,14 @@ a::after {
     transition-timing-function: ease;
 }
 
-a:hover::after {
+nav a:hover::after {
     width: 100%;
 }
 
-a:hover {
+nav a:hover {
     color: darkblue;
 }
-a:active{
+nav a:active{
     color: chocolate;
 }
 #login {
@@ -105,7 +105,68 @@ a:active{
 #login button:hover {
     color: darkblue;
 }
-
+.section{
+    position: relative;
+    height: 100vh;
+    display: none;
+}
+.login-pop-up{
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-pop-up #log{
+    width: 27%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #e5e5e5 solid 2px;
+    backdrop-filter: blur(6px);
+    border-radius: 30px;
+    height: 70vh;
+    box-shadow: #09001d -2px -7px 20px;
+    position: relative;
+    text-align: center;
+}
+.login-pop-up #log .exit{
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    background-color: #162938;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 27px;
+    border-bottom-left-radius: 28px;
+}
+.login-pop-up #log h1{
+    padding: 20px 0px;
+}
+.login-pop-up #log div form{
+    text-align: left;
+}
+.login-pop-up #log input{
+    margin: 20px 0px;
+    padding: 0 70px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px #162938 solid;
+}
+.login-pop-up #log a{
+    color: blue;
+    font-size: 15px;
+    text-decoration: none;
+}
+.login-pop-up #log button{
+    background-color: #162938;
+    border: none;
+    padding: 10px 140px;
+    color: #e5e5e5;
+    font-size: 15px;
+}
 /* code for about us page */
 .body {
     width: 100%;
@@ -124,7 +185,6 @@ a:active{
 
 .body .container .about-us h1 {
     text-align: center;
-    /* border-bottom: purple solid 4px; */
     text-decoration: underline purple;
     padding-bottom: 4px;
     margin-top: 20px;
@@ -400,6 +460,13 @@ a:active{
 }
 form{
     color: #e5e5e5;
+    position: relative;
+}
+.form form label{
+    position: absolute;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+    transition-property: top;
 }
 .form form input{
     background-color: transparent;
@@ -409,6 +476,7 @@ form{
     border-bottom: white solid;
     width: 400px;
     padding: 10px;
+    margin-bottom: 25px;
 }
 .form form textarea{
     background-color: transparent;
@@ -416,4 +484,11 @@ form{
     border-left: none;
     border-right: none;
     border-bottom: white solid;
+}
+.form form button{
+    background-color: dodgerblue;
+    padding: 13px 120px;
+    border: none;
+    color: #e5e5e5;
+    font-size: 17px;
 }
