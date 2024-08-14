@@ -27,13 +27,37 @@
           <li><a href="about.html">About</a></li>
           <li><a href="explore.html">Explore</a></li>
           <li><a href="contacts.html">Contact</a></li>
-          <li id="login"><button>Login</button></li>
+          <li id="login"><button onclick="showLog()">Login</button></li>
         </ul>
+        <i
+          class="fas fa-light fa-bars"
+          id="menu-button"
+          onclick="showsidenav()"
+        ></i>
       </div>
     </nav>
+    <div class="side-nav">
+      <ul>
+        <div class="exit">
+          <i class="fas fa-x" id="exit" onclick="closesidenav()"></i>
+        </div>
+        <li><a href="">Home</a></li>
+        <hr />
+        <li><a href="about.html">About</a></li>
+        <hr />
+        <li><a href="explore.html">Explore</a></li>
+        <hr />
+        <li><a href="contacts.html">Contact</a></li>
+        <hr />
+        <li><button onclick="showLog1()">Login</button></li>
+        <hr />
+      </ul>
+    </div>
+
     <div class="explore-header">
       <h1>EXPLORE CONTENT</h1>
     </div>
+    <section class="section-rel">
     <section id="cont">
       <section class="explore-body">
         <div class="card1">
@@ -78,8 +102,28 @@
           </div>
         </div>
       </section>
+      <div class="display-log">
+        <div class="login-pop-up">
+        
+          <div id="log">
+            <div class="exit" onclick="closeLog()"></div>
+            <div>
+            <h1>LOGIN</h1>
+            <form action="submit" method="post">
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email"><br>
+            <label for="password">password</label><br>
+            <input type="password" id="password" name="password"><br>
+            <input type="checkbox" name="" id="" placeholder="remember me"><a href="" id="forgot">forgot password?</a><br>
+            <button type="submit">login</button>
+            </form>
+            <p>Don't have an account?<a href="">Register</a></p>
+            </div>
+          </div>
+          </div>
+      </div>
     </section>
-
+  </section>
     
     <script src="all.js"></script>
     <script src="index.js"></script>
